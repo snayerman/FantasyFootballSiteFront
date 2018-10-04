@@ -19,4 +19,5 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-sass'
   ],
+  pathPrefix: "/snayerman"
 }

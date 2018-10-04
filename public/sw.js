@@ -26,30 +26,30 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0ba56505247791ba5dd0.js"
+    "url": "webpack-runtime-703e1a20a960f786e88c.js"
   },
   {
-    "url": "app-a84940019c4a4559a8e1.js"
+    "url": "app-e9367d8b2d74e868ce4f.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-c9c937b9491619a6493b.js"
   },
   {
     "url": "index.html",
-    "revision": "ac5075dc4086d0b61c91768d89290e5a"
+    "revision": "29ef93f241f3b3147f056ab2103896af"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ed0144a4d4734248d05221f6549e4e0e"
+    "revision": "f29fb3df3448c84969ae1c81a5b10005"
   },
   {
-    "url": "component---src-pages-index-js.02593f704137e33c9de0.css"
+    "url": "component---src-pages-index-js.5accb397e84b72732867.css"
   },
   {
     "url": "component---src-pages-index-js-bab541d9f74f273a312c.js"
   },
   {
-    "url": "0-7de6754da654ee92dd37.js"
+    "url": "0-302074f300d42b701044.js"
   },
   {
     "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -74,7 +74,7 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/index.html", {
+workbox.routing.registerNavigationRoute("/snayerman/offline-plugin-app-shell-fallback/index.html", {
   whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
