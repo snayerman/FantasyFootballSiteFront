@@ -39,6 +39,28 @@
          flex-direction: column;
       }
    }
+
+   &-items {
+      margin: 20px;
+      font-size: 25px;
+      font-family: 'Roboto Slab', serif;
+
+      .item {
+         margin-bottom: 15px;
+         color: #747B90;
+         height: 40px;
+         border-radius: 5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         &:hover {
+            color: #fff;
+            background-color: #18191D;
+            cursor: pointer;
+         }
+      }
+   }
 }
 
 .button-list-container {

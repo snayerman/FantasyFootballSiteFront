@@ -10,13 +10,15 @@ import './container.css';
 
 export default class Container extends Component {
    state = {
+      showMatchups: this.props.showMatchups,
       matchups: {},
       teams: {},
-      nflWeek: 4
+      nflSeason: this.props.nflSeason ? this.props.nflSeason : 2018,
+      nflWeek: this.props.nflWeek ? this.props.nflWeek : 4,
    };
 
    async getMatchup(teamId, weekId) {
-      let url = "http://localhost:3000/matchups";
+      let url = "https://mcnastyserver.herokuapp.com/matchups";
       let {matchups} = this.state;
 
       let match = await Axios(`${url}/${teamId}/${weekId}?seasonId=2018`);
@@ -26,7 +28,7 @@ export default class Container extends Component {
    }
 
    async getTeams() {
-      let url = 'http://localhost:3000/teams?seasonId=2018';
+      let url = 'https://mcnastyserver.herokuapp.com/teams?seasonId=2018';
       let res = await Axios(url);
       
       let teams = {};
@@ -37,7 +39,7 @@ export default class Container extends Component {
       return teams;
    }
 
-   componentDidMount() {
+   initialize() {
       let matchups = {};
       let teamIds = [1, 2, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14];
 
@@ -50,6 +52,15 @@ export default class Container extends Component {
             });
          })
       })
+   }
+
+   componentDidMount() {
+      this.initialize();
+   }
+
+   setWeek(week) {
+      this.setState({ nflWeek: week, showMatchups: false });
+      this.initialize();
    }
 
    renderMatchups() {
@@ -85,7 +96,7 @@ export default class Container extends Component {
    render() {
       return (
          <div className="container">
-            <Nav></Nav>
+            <Nav setWeek={this.setWeek.bind(this)} />
             <Home>
                {this.props.showMatchups ? this.renderMatchups() : this.renderMatchupDetails()}
             </Home>
