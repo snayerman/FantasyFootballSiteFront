@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+.nav-container {
+   display: flex;
+   /* width: 300px; */
+   height: 100vh;
+}
+
+.nav-menu {
+   z-index: 1;
+   width: 100px;
+   height: 100%;
+   background-color: #242730;
+   /* border-right: 1px inset; */
+   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.nav-list {
+   width: 200px;
+   height: 100%;
+   position: absolute;
+   left: 100px;
+   z-index: 2;
+   background-color: #1F232A;
+
+   &-header {
+      font-size: 35px;
+      font-family: 'Roboto Slab', serif;
+      color: rgba(0, 0, 0, 0.35);
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px inset rgba(0, 0, 0, 0.24);
+
+      h3 {
+         margin: 0 !important;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+      }
+   }
+}
+
+.button-list-container {
+   height: 100%;
+   margin-left: 25px;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+.nav-button {
+   margin-top: 30px;
+   margin-bottom: 30px;
+   width: 100%;
+   height: 50px;
+   font-size: 50px;
+   animation: mouseleave 0.5s;
+}
+
+.closed {
+   animation: fadeout 0.3s;
+   display: none;
+}
+
+.open {
+   animation: fadein 0.3s;
+}
+
+.nav-button-open {
+   margin-top: 30px;
+   margin-bottom: 30px;
+   width: 104%;
+   height: 50px;
+   font-size: 50px;
+   color: #747B90;
+   background-color: #1F232A;
+   box-shadow: -1px 2px 1px 0px rgba(0, 0, 0, 0.12), -1px 2px 1px 0px rgba(0, 0, 0, 0.24);
+}
+
+@keyframes fadein {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 100;
+   }
+}
+
+@keyframes fadeout {
+   from {
+      opacity: 100;
+   }
+
+   to {
+      opacity: 0;
+      display: none;
+   }
+}
+
+.selected {
+   color: #3D71D2 !important;
+   animation: mouseclick 0.5s;
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+.not-selected {
+   color: #747B90;
+   
+   &:hover {
+      color: #fff;
+      cursor: pointer;
+      animation: mouseover 0.5s;
+   }
+}
+
+@keyframes mouseover {
+   from {
+      color: #747B90;
+   }
+
+   to {
+      color :#fff;
+   }
+}
+
+@keyframes mouseclick {
+   from {
+      color: #fff;
+   }
+
+   to {
+      color :#3D71D2;
+   }
+}
+
+@keyframes mouseleave {
+   to {
+      color: #747B90;
+   }
+
+   from {
+      color :#fff;
+   }
+}

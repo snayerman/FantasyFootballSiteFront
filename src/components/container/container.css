@@ -1,0 +1,10 @@
+body {
+   background-color: #1E2128;
+   margin: 0px !important;
+   height: 100%;
+}
+
+.container {
+   display: flex;
+   height: 100vh;
+}

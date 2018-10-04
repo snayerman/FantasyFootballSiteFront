@@ -1,0 +1,175 @@
+.matchup-card {
+   display: flex;
+   // height: 380px;
+   // width: 520px;
+   height: 27vw;
+   width: 36vw;
+   min-width: 275px;
+   min-height: 200px;
+   background-image: url('../../images/matchup-background.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   box-shadow: -11px 8px 6px rgba(0, 0, 0, 0.5);
+
+   &:not(:last-child) {
+      margin-right: 15px;
+   }
+
+   .triangle-topleft {
+      width: 0;
+      height: 0;
+      border-top: 200px solid red;
+      border-right: 400px solid transparent;
+   }
+
+   .triangle-bottomright {
+      width: 0;
+      height: 0;
+      border-bottom: 200px solid green;
+      border-left: 400px solid transparent;
+   }
+
+   .matchup-left, .matchup-right {
+      // flex: 1;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .circle-logo {
+      width: 11vw;
+      height: 11vw;
+      border-radius: 50%;
+   }
+
+   .team-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      max-width: 100%;
+
+      p {
+         font-size: calc(10px + 0.5vw);
+         width: 75%;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         padding: 10px;
+      }
+
+      .score {
+         margin-top: 25px;
+         font-size: calc(12px + 2vw);
+      }
+   }
+   
+}
+
+.matchup-row {
+   display: flex;
+   justify-content: space-around;
+   
+   a {
+      text-decoration: none !important;
+   }
+}
+
+.matchup-detail-container {
+   display: flex;
+
+   .hometeam-container, .awayteam-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      font-size: 30px;
+      color: #fff;
+      margin: 20px;
+      // border-radius: 10px;
+      // height: 75px;
+      justify-content: center;
+
+      .matchup-detail-score {
+         display: flex;
+         flex-direction: column;
+
+         .home {
+            background-color: #ff2a5c;
+            box-shadow: 0px 1px 6px 7px rgba(255, 42, 92, 0.25), 0px 1px 6px 7px rgba(255, 42, 92, 0.5);
+         }
+
+         .away {
+            background-color: #4b1b59;
+            box-shadow: 0px 1px 6px 7px rgba(75, 27, 89, 0.25), 0px 1px 6px 7px rgba(75, 27, 89, 0.5);
+         }
+
+         &-name {
+            height: 75px;
+            // border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+         &-players {
+            margin-top: 25px;
+            box-shadow: 0px 1px 6px 7px rgba(0, 0, 0, 0.5);
+            // border-radius: 10px;
+
+            .player {
+               display: flex;
+               align-items: center;
+               border-bottom: 1px #747B90 solid; //make this for all but last child later
+               color: #747B90;
+               height: 60px;
+               margin-bottom: 10px;
+               margin-left: 5px;
+               margin-right: 5px;
+
+               &-home {
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+
+                  &-picture {
+                     flex: 1;
+                  }
+
+                  &-name {
+                     flex: 6;
+                  }
+
+                  &-score {
+                     flex: 2;
+                     font-size: 25px;
+                     color: #6EBB75;
+                  }
+               }
+
+               &-away {
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+
+                  &-picture {
+                     flex: 1;
+                  }
+
+                  &-name {
+                     flex: 6;
+                  }
+
+                  &-score {
+                     flex: 2;
+                     font-size: 25px;
+                     color: #6EBB75;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

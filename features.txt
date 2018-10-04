@@ -1,0 +1,14 @@
+---------
+Home page
+---------
+
+1. Current league champ
+
+2. Current week - year
+   a. matchups
+
+---------
+Scores (can select season from dropdown)
+---------
+https://dribbble.com/shots/2433732-Day-88-Leaderboard
+https://dribbble.com/shots/3165170-Dashboard-Navigation-Concept
